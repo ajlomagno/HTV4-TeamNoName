@@ -11,9 +11,21 @@
 		text-align: center;
 	}
 	h1 {
-		font-size: 2em;
+		font-size: 2em;		
+	}
+	.entry {
+		text-align: right;
 		
 	}
+	.info{
+		padding: 10px;
+	}
+	label { 
+		vertical-align: top; 
+		padding: 8px;
+	}​
+	
+	
 	 
 	
 </style>
@@ -21,20 +33,45 @@
 
 
 <div id="mainPopup">
-<ul class="nav nav-tabs nav-fill justify-content-center" >
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Job Apps</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Current Jobs</a>
-  </li>
-</ul>
+	<div class="tabs nav-fill justify-content-center">
+		<ul class="nav nav-tabs">
+		  <li class="nav-item">
+		    <a class="nav-link active" href="#">Job Apps</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Current Jobs</a>
+		  </li>
+		</ul>
+	</div>
 
+	<div id="info">
+		<h1>Title and Logo go here</h1>
+		<p>You have not applied to xxx job yet at yy company</p>
+	</div>
+	
+	<div class="dashboard">
+		<button type="button" class="btn">Create a resume!</button>
+		<button type="button" class="btn">Save the post</button>
+	</div>
 
+	<div class="form">
+		
+      		<form action = "/cgi-bin/hello_get.cgi" method = "get">
 
-<h1>Title and Logo go here</h1>
-<p>You have not applied to xxx job yet at yy company</p>
-<button type="button" class="btn">Create a resume!</button>
+  			<div class="entry">
+				<label for="Field1">Objective: </label> 
+		         <textarea rows = "5" cols = "30" name = "Objective">
+		         </textarea>
+
+		         <br />
+				 <label for="Field1">Field1: </label>  
+		         <textarea rows = "5" cols = "30" name = "Field1">
+		         </textarea>
+	         </div>
+         <input type = "submit" value = "Submit resume" />
+      </form>
+	</div>
+
 </div>
 
 
