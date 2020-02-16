@@ -24,13 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         current_title = tabs[0].title;
         seconds = new Date().getSeconds();
         const job = new Job(current_title, current_site, seconds, "m.me/HI");
-        alert(job.title);
+        // alert(job.title);
         addJob(job);
       }
     );
 
-    // alert("not");
-    // jobs = getJobs();
+    alert("not");
+    jobs = getJobs();
+    // alert(jobs.length);
     // alert(jobs.length);
     // for (i = 0; i < jobs.length; i++) {
     // alert(jobs[i].title);
@@ -50,26 +51,33 @@ function addJob(job) {
     });
     chrome.storage.local.get(["sites_applied_to"], function(result) {
       // alert("VALUE IS SET NOW: " + result.sites_applied_to);
-      // out = "";
-      // for (i = 0; i < result.sites_applied_to.length; i++) {
-      //   out += result.sites_applied_to[i].title + " ";
-      //   out += result.sites_applied_to[i].company + " ";
-      //   out += result.sites_applied_to[i].location + " ";
-      // }
+      out = "";
+      for (i = 0; i < result.sites_applied_to.length; i++) {
+        out += result.sites_applied_to[i].title + " ";
+        out += result.sites_applied_to[i].company + " ";
+        out += result.sites_applied_to[i].location + " ";
+      }
       // alert(out);
     });
   });
 }
 
-// function getJobs() {
-//   chrome.storage.local.get(["sites_applied_to"], function(result) {
-//     jobs = [];
-//     for (i = 0; i < result.sites_applied_to.length; i++) {
-//       jobs.push(jobs);
-//     }
-//     return jobs;
-//   });
-// }
+async function getJobs() {
+  return new Promise((resolve, reject) =>
+    chrome.storage.local.get(["sites_applied_to"], result =>
+      resolve(result.sites_applied_to)
+    )
+  ).then(function(jobs) {
+    out = "";
+    for (i = 0; i < jobs.length; i++) {
+      out += jobs[i].title + " ";
+      // out += result.sites_applied_to[i].company + " ";
+      // out += result.sites_applied_to[i].location + " ";
+    }
+    alert(out);
+    return jobs;
+  });
+}
 
 class Job {
   constructor(t, c, l, lnk) {
@@ -79,3 +87,16 @@ class Job {
     this.link = lnk;
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var link = document.getElementById("btnViewJobs");
+  // onClick's logic below:
+  link.addEventListener("click", function() {
+    getJobs();
+    // alert("starting");
+    // alert("hello" + getJobs().length);
+    // chrome.storage.local.get({ sites_applied_to: [] }, function(result) {
+    //   alert(result.sites_applied_to.length);
+    // });
+  });
+});
