@@ -1,9 +1,21 @@
+#myInput, #myInput2, #myInput3 {
+  width: 20%;
+  margin-right: 6.5%;
+  margin-left: 6.5%;
+}
+
 
 input{ 
   padding: 10px;
   margin: 10px;
+
+
   font-family: Helvetica, Ubuntu, Arial, sans-serif;
   text-align: center;
+}
+
+*{
+  font-family: 'Montserrat'
 }
 
 
