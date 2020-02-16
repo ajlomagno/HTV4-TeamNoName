@@ -1,3 +1,29 @@
-h1 {
-		color: red;
-	}
+#mainPopup {
+        padding: 10px;
+        height: 200px;
+        width: 400px;
+        text-align: center;
+      }
+* {
+	font-family: 'Montserrat'
+}
+textarea{
+	border-radius: 25px;
+	padding: 10px;
+	font-family: Helvetica, Ubuntu, Arial, sans-serif;
+}
+#testbox{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#button, #btn1 {
+  background-color: #0a98c0; 
+  border-radius: 25px;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  border-style: solid;
+  margin: 10px;
+}
