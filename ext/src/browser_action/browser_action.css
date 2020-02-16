@@ -7,14 +7,21 @@
 * {
 	font-family: 'Montserrat'
 }
+h1{
+  color: #413e66;
+}
+
 textarea{
 	border-radius: 25px;
 	padding: 10px;
 	font-family: Helvetica, Ubuntu, Arial, sans-serif;
 }
-#testbox{
-	font-weight: bold;
-	font-size: 14px;
+#form{
+  font-weight: bold;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 20%;
+  margin-top: 10px;
 }
 
 #button, #btn1 {
@@ -26,4 +33,20 @@ textarea{
   display: inline-block;
   border-style: solid;
   margin: 10px;
+}
+
+label{
+  padding: 10px;
+}
+
+input:focus {
+  border-color: #0a98c0;
+  border-radius: 25px;
+  outline: none;
+}
+input {
+  border-radius: 25px;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  padding-left: 5px;
 }

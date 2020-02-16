@@ -20,17 +20,21 @@
 	<script src="popup.js"></script>
     </div>
 
-    <div id="testbox">
+    <div id="form">
       <form action="/">
         <div class="item mb-1">
-          <p>Objective</p>
-          <textarea rows="5" cols="40" required></textarea>
+          <label for="Title"> Title </label>
+          <input type="text" name="Title"> </input>
         </div>
         <div class="item mb-2">
-          <p>Field 1</p>
-          <textarea rows="5" cols="40" required></textarea>
+          <label for="Company"> Company </label>
+          <input type="text" name="Company"> </input>
         </div>
-        <input id= "button" class="btn btn-primary mb-3" type="submit" value ="Submit resume" />
+        <div class="item mb-3" >
+          <label for="Location"> Location </label>
+          <input type="text" name="Location"> </input>
+        </div>
+        <input id= "button" class="btn btn-primary mb-4" type="submit" value ="Submit resume" />
       </form>
     </div>
     </div>
