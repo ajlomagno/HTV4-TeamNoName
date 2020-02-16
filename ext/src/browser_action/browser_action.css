@@ -22,9 +22,10 @@ textarea{
   text-align: right;
   margin-right: 20%;
   margin-top: 10px;
+  padding-bottom: 10px;
 }
 
-#button, #btn1 {
+.btn-secondary{
   background-color: #0a98c0; 
   border-radius: 25px;
   color: white;
@@ -33,6 +34,13 @@ textarea{
   display: inline-block;
   border-style: solid;
   margin: 10px;
+  outline: none;
+}
+
+.btn-secondary:focus {
+  border-color: #8ed9ed;
+  border-radius: 25px;
+  outline: none;
 }
 
 label{
