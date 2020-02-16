@@ -1,7 +1,9 @@
-var button = document.getElementById("btn1");
-button.addEventListener("click", function(){
-    chrome.tabs.create({url:"file:///C:/Users/Albert/Documents/GitHub/HTV4-TeamNoName/jobsDB.html"});
-});
+// var button = document.getElementById("btn1");
+// button.addEventListener("click", function() {
+//   chrome.tabs.create({
+//     url: "file:///C:/Users/Albert/Documents/GitHub/HTV4-TeamNoName/jobsDB.html"
+//   });
+// });
 
 function myFunction() {
   var x = document.getElementById("myDIV");
