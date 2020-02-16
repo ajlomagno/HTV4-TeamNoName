@@ -1,3 +1,17 @@
+var button = document.getElementById("btn1");
+button.addEventListener("click", function(){
+    chrome.tabs.create({url:"file:///C:/Users/Albert/Documents/GitHub/HTV4-TeamNoName/jobsDB.html"});
+});
+
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var link = document.getElementById("btnSavePage");
   // onClick's logic below:
